@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Banti Rathod - Flutter Developer Portfolio. 3.6 years of experience in building scalable mobile applications with Flutter, Dart, and modern UI/UX design.">
+  <meta name="keywords" content="Flutter Developer, Mobile App Developer, Dart, UI/UX, Flutter Portfolio, Banti Rathod">
+  <meta name="author" content="Banti Rathod">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://banti-rathod-tech.web.app/">
+  <meta property="og:title" content="Banti Rathod - Flutter Developer Portfolio">
+  <meta property="og:description" content="3.6 years of Flutter development experience. Mobile app developer specializing in cross-platform applications.">
+  <meta property="og:image" content="https://banti-rathod-tech.web.app/icons/Icon-512.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://banti-rathod-tech.web.app/">
+  <meta property="twitter:title" content="Banti Rathod - Flutter Developer Portfolio">
+  <meta property="twitter:description" content="3.6 years of Flutter development experience. Mobile app developer specializing in cross-platform applications.">
+  <meta property="twitter:image" content="https://banti-rathod-tech.web.app/icons/Icon-512.png">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Banti Rathod Portfolio">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#0175C2">
+
+  <title>Banti Rathod - Flutter Developer Portfolio</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <script>
+    // Performance optimization: Load Flutter bootstrap asynchronously
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

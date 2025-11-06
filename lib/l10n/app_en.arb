@@ -1,0 +1,100 @@
+{
+  "@@locale": "en",
+  "appTitle": "Banti Rathod - Portfolio",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "aboutMe": "About Me",
+  "@aboutMe": {
+    "description": "About section title"
+  },
+  "aboutMeSubtitle": "Passionate Flutter developer crafting beautiful mobile experiences",
+  "@aboutMeSubtitle": {
+    "description": "About section subtitle"
+  },
+  "workExperience": "Work Experience",
+  "@workExperience": {
+    "description": "Work experience section title"
+  },
+  "workExperienceSubtitle": "My professional journey in Flutter development",
+  "@workExperienceSubtitle": {
+    "description": "Work experience section subtitle"
+  },
+  "projects": "Projects",
+  "@projects": {
+    "description": "Projects section title"
+  },
+  "projectsSubtitle": "Showcasing my Flutter development expertise",
+  "@projectsSubtitle": {
+    "description": "Projects section subtitle"
+  },
+  "skillsTechnologies": "Skills & Technologies",
+  "@skillsTechnologies": {
+    "description": "Skills section title"
+  },
+  "downloadResume": "Download Resume",
+  "@downloadResume": {
+    "description": "Download resume button label"
+  },
+  "current": "Current",
+  "@current": {
+    "description": "Current job indicator"
+  },
+  "scrollToExplore": "Scroll to explore",
+  "@scrollToExplore": {
+    "description": "Scroll indicator text"
+  },
+  "menu": "Menu",
+  "@menu": {
+    "description": "Menu button label"
+  },
+  "switchToLightMode": "Switch to light mode",
+  "@switchToLightMode": {
+    "description": "Theme toggle tooltip for light mode"
+  },
+  "switchToDarkMode": "Switch to dark mode",
+  "@switchToDarkMode": {
+    "description": "Theme toggle tooltip for dark mode"
+  },
+  "backToTop": "Back to top",
+  "@backToTop": {
+    "description": "Back to top button label"
+  },
+  "contact": "Contact",
+  "@contact": {
+    "description": "Contact section navigation label"
+  },
+  "about": "About",
+  "@about": {
+    "description": "About section navigation label"
+  },
+  "experience": "Experience",
+  "@experience": {
+    "description": "Experience section navigation label"
+  },
+  "education": "Education",
+  "@education": {
+    "description": "Education section navigation label"
+  },
+  "media": "Media",
+  "@media": {
+    "description": "Media section navigation label"
+  },
+  "testimonials": "Testimonials",
+  "@testimonials": {
+    "description": "Testimonials section navigation label"
+  },
+  "couldNotDownloadResume": "Could not download resume",
+  "@couldNotDownloadResume": {
+    "description": "Error message when resume download fails"
+  },
+  "couldNotDownloadPdf": "Could not download PDF",
+  "@couldNotDownloadPdf": {
+    "description": "Error message when PDF download fails"
+  },
+  "flutterDeveloper": "Flutter Developer",
+  "@flutterDeveloper": {
+    "description": "Developer role/title"
+  }
+}
+
