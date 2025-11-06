@@ -1,4 +1,3 @@
-import 'package:banti_rathod_flutter/main.dart';
 import 'package:banti_rathod_flutter/sections/about_section.dart';
 import 'package:banti_rathod_flutter/sections/header_section.dart';
 import 'package:banti_rathod_flutter/sections/work_experience_section.dart';
@@ -8,15 +7,13 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   group('Golden Tests - Responsive Layouts', () {
     testWidgets('HeaderSection - Mobile Size', (WidgetTester tester) async {
-      await tester.binding.setSurfaceSize(const Size(375, 667)); // iPhone SE size
+      await tester.binding.setSurfaceSize(
+        const Size(375, 667),
+      ); // iPhone SE size
 
       await tester.pumpWidget(
         const MaterialApp(
-          home: Scaffold(
-            body: SingleChildScrollView(
-              child: HeaderSection(),
-            ),
-          ),
+          home: Scaffold(body: SingleChildScrollView(child: HeaderSection())),
         ),
       );
 
@@ -33,11 +30,7 @@ void main() {
 
       await tester.pumpWidget(
         const MaterialApp(
-          home: Scaffold(
-            body: SingleChildScrollView(
-              child: HeaderSection(),
-            ),
-          ),
+          home: Scaffold(body: SingleChildScrollView(child: HeaderSection())),
         ),
       );
 
@@ -50,15 +43,13 @@ void main() {
     }, skip: true);
 
     testWidgets('AboutSection - Desktop Size', (WidgetTester tester) async {
-      await tester.binding.setSurfaceSize(const Size(1920, 1080)); // Desktop size
+      await tester.binding.setSurfaceSize(
+        const Size(1920, 1080),
+      ); // Desktop size
 
       await tester.pumpWidget(
         const MaterialApp(
-          home: Scaffold(
-            body: SingleChildScrollView(
-              child: AboutSection(),
-            ),
-          ),
+          home: Scaffold(body: SingleChildScrollView(child: AboutSection())),
         ),
       );
 
@@ -70,16 +61,15 @@ void main() {
       );
     }, skip: true);
 
-    testWidgets('WorkExperienceSection - Mobile Size',
-        (WidgetTester tester) async {
+    testWidgets('WorkExperienceSection - Mobile Size', (
+      WidgetTester tester,
+    ) async {
       await tester.binding.setSurfaceSize(const Size(375, 667));
 
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
-            body: SingleChildScrollView(
-              child: WorkExperienceSection(),
-            ),
+            body: SingleChildScrollView(child: WorkExperienceSection()),
           ),
         ),
       );
@@ -93,4 +83,3 @@ void main() {
     }, skip: true);
   });
 }
-

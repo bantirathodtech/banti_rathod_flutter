@@ -1,5 +1,4 @@
 import 'package:banti_rathod_flutter/main.dart';
-import 'package:banti_rathod_flutter/utils/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -38,4 +37,3 @@ void main() {
     });
   });
 }
-
