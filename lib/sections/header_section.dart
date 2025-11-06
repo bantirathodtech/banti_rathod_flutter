@@ -70,10 +70,15 @@ class _HeaderSectionState extends State<HeaderSection>
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final screenWidth = MediaQuery.of(context).size.width;
+    final mediaQuery = MediaQuery.of(context);
+    final screenWidth = mediaQuery.size.width;
     final isMobile = screenWidth < 600;
+    // Clamp the text scale for this section to avoid overflow with extreme accessibility scales
+    final clampedTextScale = mediaQuery.textScaler.scale(1.0).clamp(0.8, 1.2);
 
-    return Container(
+    return MediaQuery(
+      data: mediaQuery.copyWith(textScaler: TextScaler.linear(clampedTextScale)),
+      child: Container(
       padding: EdgeInsets.symmetric(
         vertical: isMobile ? 80 : 120,
         horizontal: 20,
@@ -90,7 +95,9 @@ class _HeaderSectionState extends State<HeaderSection>
         ),
       ),
       child: Center(
-        child: Column(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 1100),
+          child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Profile Avatar with Animation
@@ -129,12 +136,17 @@ class _HeaderSectionState extends State<HeaderSection>
                 position: _slideAnimation,
                 child: Text(
                   'Banti Rathod',
-                  style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                  style: (isMobile
+                          ? Theme.of(context).textTheme.headlineMedium
+                          : Theme.of(context).textTheme.displaySmall)
+                      ?.copyWith(
                     fontWeight: FontWeight.bold,
                     letterSpacing: -0.5,
                     height: 1.2,
                   ),
                   textAlign: TextAlign.center,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
             ),
@@ -160,6 +172,9 @@ class _HeaderSectionState extends State<HeaderSection>
                       color: colorScheme.onPrimaryContainer,
                       fontWeight: FontWeight.w500,
                     ),
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ),
@@ -172,7 +187,9 @@ class _HeaderSectionState extends State<HeaderSection>
               child: SlideTransition(
                 position: _slideAnimation,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: isMobile ? 20 : 40),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: isMobile ? 12 : 40,
+                  ),
                   child: Text(
                     'UI/UX Developer | Frontend Specialist | Mobile Apps | API Integration',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
@@ -181,6 +198,7 @@ class _HeaderSectionState extends State<HeaderSection>
                     ),
                     textAlign: TextAlign.center,
                     maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ),
@@ -208,6 +226,7 @@ class _HeaderSectionState extends State<HeaderSection>
               ),
             ),
           ],
+        ),
         ),
       ),
     );
